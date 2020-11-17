@@ -1,0 +1,65 @@
+h1 {
+    font-family: 'Goldman';
+    font-size: 50px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.place {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 400px;
+    height: 50px;
+    font-size: large;
+    border: none;
+    /* border-bottom: 3px solid black;*/
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    text-align: center;
+    background-color: #FAF7F6;
+    margin-bottom: 30px;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* Button */
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+a {
+    width: 150px;
+    height: 50px;
+    color: black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+    font-family: 'Goldman';
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
