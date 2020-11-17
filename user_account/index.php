@@ -8,7 +8,6 @@
 <body>
     <?php
         echo 'axel';
-        echo 'moula';
     ?>
 </body>
 </html>
