@@ -1,0 +1,165 @@
+.entete{                                    /*barre grise pour en tete et style d'écriture */ 
+	width: 100%; 
+	background-color: #C5C5C5; 
+	text-align: center;
+	padding-bottom: 13px ; 
+	padding-top: 13px ;
+	font-family:monospace ;
+}
+
+h1 {
+		margin: -5px ; 
+		font-family:sans-serif; 
+		text-align: center;
+		font-size: 300%
+
+		
+	}
+
+.seconnecter{
+	align-content: right;
+}
+
+nav {
+	 width: 100%;        /* alligner a gauche */ 
+	 margin: auto ; 
+	 background-color: white;               /* fond blanc*/
+	 position: relative;
+	 top: 10px;                      /* marge en dessous du titre*/
+
+}
+
+nav ul { 
+	list-style-type: none;  /* enlevr chaque point devant lecriture pour les "ul" en html liste */
+}
+nav ul li {
+	float: left; /* faire flotter les maqrques a gauche à la suites */
+	width: 55%; /* séparer les "li" (marques) en pourcentages */
+	text-align: center; /*alligner au centres les lignes */  
+}
+nav ul::after {
+	content: "";
+	display: table;
+	clear: both;
+
+}
+nav a {
+	display: block;          
+	text-decoration: none;      /*enlevr le surlignage */
+	color: black;              /* couleurs du textes en noir*/
+	border-bottom: 2px solid transparent ;
+	padding: 9px 110px ;          /* si probleme mettre 0 a la place du 110 */ 
+
+}
+
+nav a:hover {
+	color: black ;         /* change la couleur du textes au survol */ 
+	font-weight: bold;          /*met en gras au survol */ 
+	font-size: 18px ;   /* augmente la taille au survol */ 
+	border-bottom: 2px double brown ;        /* barre du dessous double et couleur  */ 
+}
+.sous {
+	display: none;       /*fait disparraitre les sous */ 
+	box-shadow: 0px 1px 2px #CCC ; 
+	background-color: white ; 
+}
+nav > ul li:hover .sous {
+	display: block;            /*remet les sous quand on passe le curseur sur ce qu'on veut */ 
+}
+.sous li{
+	float: none;
+	width: 100%;     /*centre les sous quand ils sont défilé */ 
+	text-align:  left; /* sous a gauche */ 
+} 
+.sous a { 
+	padding: 10px; /*espace les sous dans le defilement */ 
+	border-bottom: none; 
+} 
+.sous a:hover { 
+	border-bottom: none;  /*enleve la barre des sous au survole */ 
+	background-color: white;   /*fond des cases de sous */ 
+} 
+.sous {
+	display: none;
+	box-shadow: 0px 1px 2px #ccc;
+	background-color: white ; /*fond de tout les sous */ 
+	position: relative;       
+	width: 100%; 
+}
+nav ul li {
+
+	float: left;
+	width: 25%;     /*decaler les collonne de 20% entre eux */ 
+	text-align: center;      /*aligner le texte au centre */ 
+	position: relative;    
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.descrip{
+    display: flex;
+    justify-content: center;
+}
+
+.bio_prez{
+    display: flex;
+    justify-content:  space-around;
+}
+.bio{
+    background-color: #C5C5C5;
+    height: 350px;
+    width: 350px;
+    border-radius: 2px;
+    border: 2px solid whitesmoke;
+    color: black;
+    text-align: center;
+    font-size: large;
+}
+.dev{
+    display: flex;
+    justify-content: center;
+}
+
+.devo{
+    display: flex;
+    justify-content: center;
+}
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.dev_pic {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 60%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 60%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.dev_pic:hover .overlay {
+  opacity: 1;
+}
