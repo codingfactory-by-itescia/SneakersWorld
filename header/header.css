@@ -1,0 +1,115 @@
+*, ::before, ::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+ul, li, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 80px;
+}
+header nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header nav h1{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 1.8em;
+    width: 17%;
+    color: #f1f1f1;
+    font-family: 'Goldman', sans-serif;
+}
+header nav li{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+#menu-links{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+#menu-links li{
+    color: #f1f1f1;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top: 20px;
+    padding: 20px 10px;
+    transition: all 0.3s ease-in-out;
+}
+.isActive{
+    background-color: #f1f1f1;
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+#menu-links li:hover{
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+#profil-links{
+    display: flex;
+    width: 6%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+#profil-links i{
+    font-size: 30px;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+#profil-links i:hover{
+    color: grey;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.container{
+    height: 1200px;
+}
+.fa-bars{
+    font-size: 30px;
+    color: #f1f1f1;
+    position: absolute;
+    cursor: pointer;
+    top: 25%;
+    left: 5%;
+    display: none;
+}
+#coll-logo{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+.coll-img{
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+.coll-img:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 960px){
+    
+    
+    #menu-links li{
+        width: 100%;
+    }
+    #profil-links{
+        margin: 0;
+    }
+}
