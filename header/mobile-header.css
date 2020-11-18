@@ -1,0 +1,50 @@
+@media only screen and (max-width:768px){
+    #title{
+        position: absolute;
+        left: 15%;
+        font-size: 1.5em;
+    }
+    .fa-bars{
+        display: block;
+    }
+    #menu-links{
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        flex-wrap: wrap;
+        top: -200px;
+        transition: all 0.5s ease-in-out;
+    }
+    .visible{
+        animation: upDown 0.5s ease forwards;
+        transition: all 0.5s ease-in-out;
+    }
+    @keyframes upDown {
+        100%{
+            top: 80px;
+        }
+    }
+    @keyframes downUp {
+        100%{
+            top: -200px;
+        }
+    }
+    #profil-links{
+        width: 8%;
+        position: absolute;
+        right: 9%;
+        top: 20px;
+    }
+    #profil-links i{
+        font-size: 24px;
+        margin: 3px;
+    }
+
+    #coll-logo{
+        position: absolute;
+        flex-wrap: wrap;
+        width: 100%;
+        top: 272px;
+    }
+}
