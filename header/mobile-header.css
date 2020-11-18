@@ -1,14 +1,16 @@
 @media only screen and (max-width:768px){
     #title{
+        width: auto;
         position: absolute;
-        left: 15%;
+        top: 25%;
+        left: 20%;
         font-size: 1.5em;
     }
     .fa-bars{
         display: block;
     }
     #menu-links{
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: black;
         width: 100%;
         position: absolute;
         text-align: center;
@@ -31,9 +33,10 @@
         }
     }
     #profil-links{
-        width: 8%;
+        width: 25%;
         position: absolute;
-        right: 9%;
+        justify-content: space-evenly;
+        right: 0;
         top: 20px;
     }
     #profil-links i{
