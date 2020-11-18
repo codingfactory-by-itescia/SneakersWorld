@@ -1,18 +1,33 @@
 body {
+    height: 100vh;
     background-color: black;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
+/* BOUTON MENU PRINCIPAL */
 header {
     color: white;
     text-align: center;
 }
 
-h1 {
+.button-menu {
     font-family: 'Goldman';
     font-size: 50px;
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    border-bottom: 15px solid black;
+    border-top: 15px solid black;
 }
 
+.button-menu:hover {
+    border-left: 15px solid red;
+    border-right: 15px solid red;
+}
+
+/* CARD */
 #card {
     display: flex;
     justify-content: center;
@@ -30,17 +45,20 @@ h1 {
     padding: 30px;
 }
 
-h2 {
+h1 {
     font-family: 'Goldman';
 }
+ form {
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+ }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 
-#input-connect input {
+/* INPUT */
+input {
     width: 300px;
     height: 50px;
     font-size: large;
@@ -62,14 +80,16 @@ input:focus {
     outline: none;
 }
 
-
+/* BOUTONS */
 #buttons {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-a {
+
+.button {
     width: 150px;
     height: 50px;
     color: black;
@@ -77,12 +97,18 @@ a {
     border-top: 3px solid black;
     border-left: 3px dashed black;
     border-right: 3px dashed black;
+    font-size: large;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    font-size: large;
     text-decoration: none;
     font-family: 'Goldman';
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
 }
 

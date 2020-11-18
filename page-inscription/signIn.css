@@ -1,13 +1,41 @@
-h1 {
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+.button-menu {
     font-family: 'Goldman';
     font-size: 50px;
-    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    border-bottom: 15px solid white;
+    border-top: 15px solid white;
+}
+
+.button-menu:hover {
+    border-left: 15px solid red;
+    border-right: 15px solid red;
+}
+
+.form {
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .place {
@@ -25,7 +53,6 @@ input {
     border-right: 3px solid black;
     text-align: center;
     background-color: #FAF7F6;
-    margin-bottom: 30px;
 }
 
 input:focus {
@@ -40,7 +67,7 @@ input:focus {
     justify-content: space-evenly;
 }
 
-a {
+.button {
     width: 150px;
     height: 50px;
     color: black;
@@ -57,7 +84,7 @@ a {
     font-family: 'Goldman';
 }
 
-a:hover {
+.button:hover {
     background-color: black;
     color: white;
     border-left: 3px solid red;
