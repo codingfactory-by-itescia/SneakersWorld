@@ -1,35 +1,11 @@
 @media only screen and (max-width:768px){
-    nav {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    
     #title{
         width: auto;
+        position: absolute;
+        top: 25%;
+        left: 20%;
         font-size: 1.5em;
     }
-
-    i {        
-        width: auto;
-    }
-
-    #profil-links{
-        width: auto;
-    }
-    #profil-links i{
-        font-size: 24px;
-        margin: 3px;
-    }
-
-    #coll-logo{
-        position: absolute;
-        flex-wrap: wrap;
-        width: 100%;
-        top: 272px;
-    }
-
     .fa-bars{
         display: block;
     }
@@ -56,5 +32,22 @@
             top: -200px;
         }
     }
+    #profil-links{
+        width: 25%;
+        position: absolute;
+        justify-content: space-evenly;
+        right: 0;
+        top: 20px;
+    }
+    #profil-links i{
+        font-size: 24px;
+        margin: 3px;
+    }
 
+    #coll-logo{
+        position: absolute;
+        flex-wrap: wrap;
+        width: 100%;
+        top: 272px;
+    }
 }
