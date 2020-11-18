@@ -88,6 +88,14 @@ input:focus {
     justify-content: space-evenly;
 }
 
+#buttons input {
+    width: 156px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 
 .button {
     width: 150px;
