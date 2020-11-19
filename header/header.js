@@ -14,13 +14,13 @@ document.getElementById('header').innerHTML = `<header id="header">
     </ul>
 </nav>
 <ul id="coll-logo" style="display: none">
-    <li><img class="coll-img" src="./Logo/Adidas.png" alt="Logo adidas"></li>
-    <li><img class="coll-img" src="./Logo/Asics.png" alt="Logo Asics"></li>
-    <li><img class="coll-img" src="./Logo/Jordan.png" alt="Logo Jordan"></li>
-    <li><img class="coll-img" src="./Logo/New Balance.png" alt="Logo New Balance"></li>
-    <li><img class="coll-img" src="./Logo/Nike.png" alt="Logo Nike"></li>
-    <li><img class="coll-img" src="./Logo/Puma.png" alt="Logo Puma"></li>
-    <li><img class="coll-img" src="./Logo/Vans.png" alt="Logo Vans"></li>
+    <li><img class="coll-img" src="../header/Logo/Adidas.png" alt="Logo adidas"></li>
+    <li><img class="coll-img" src="../header/Logo/Asics.png" alt="Logo Asics"></li>
+    <li><img class="coll-img" src="../header/Logo/Jordan.png" alt="Logo Jordan"></li>
+    <li><img class="coll-img" src="../header/Logo/New Balance.png" alt="Logo New Balance"></li>
+    <li><img class="coll-img" src="../header/Logo/Nike.png" alt="Logo Nike"></li>
+    <li><img class="coll-img" src="../header/Logo/Puma.png" alt="Logo Puma"></li>
+    <li><img class="coll-img" src="../header/Logo/Vans.png" alt="Logo Vans"></li>
 </ul>
 </header>`;
 
