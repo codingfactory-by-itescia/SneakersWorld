@@ -16,18 +16,20 @@
         </div>
     </header>
     <?php
-    
+
     if (!empty($_POST)) {
 
+        require '../database/db.php';
+
         $errors = array();
-        
+
         if (empty($_POST['prenom']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['prenom'])) {
             $errors['prenom'] = "Pseudo invalide.";
         }
 
         if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['nom'])) {
             $errors['nom'] = "Pseudo invalide.";
-        } 
+        }
 
         if (empty($_POST['mail']) || !filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
             $errors['mail'] = "Email invalide";
@@ -43,7 +45,7 @@
                 $errors['mail'] = 'Cet email est déjà utilisé';
             }
         }
-        
+
 
         if (empty($_POST['password'])) {
             $errors['password'] = "Mot de passe invalide";
@@ -61,14 +63,12 @@
             $errors['city'] = "Ville invalide";
         }
 
-        if (empty($_POST['zipCode'])) {
+        if (empty($_POST['zipCode']) || is_int($_POST['zipCode']) == "false") {
             $errors['zipCode'] = "Code postal invalide";
         }
 
         if (empty($errors)) {
 
-            require '../database/db.php';
-            
             $req = $pdo->prepare("
                         INSERT INTO users(nom,prenom,password,naissance,mail,adresse,ville,cdp)
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -87,7 +87,7 @@
 
             $req->execute();
 
-            /*
+
             $req2 = $pdo->prepare("SELECT * FROM users WHERE mail = ?");
 
             $req2->execute(array($_POST['mail']));
@@ -97,14 +97,32 @@
             session_start();
 
             $_SESSION['auth'] = $user2;
-            */
 
-            header('Location: ../img360/sneak.html');
+            header('Location: ../img360/sneak.php');
 
             exit;
         }
     }
+
     ?>
+
+
+    <?php if (!empty($errors)) : ?>
+        <div class="error-div">
+            <ul>
+
+                <?php foreach ($errors as $error) : ?>
+
+                    <li><?= $error; ?></li>
+
+                <?php endforeach; ?>
+
+            </ul>
+        </div>
+
+    <?php endif; ?>
+
+
     <div class="form">
         <form action="" method="POST">
             <div class="place">
@@ -129,16 +147,17 @@
                 <input name="city" class="city input" type="text" placeholder="Ville" required>
             </div>
             <div class="place">
-                <input name="zipCode" class="zipCode input" type="text" placeholder="Code postal" required>
+                <input name="zipCode" class="zipCode input" type="number" placeholder="Code postal" required>
             </div>
             <div id="buttons">
                 <a class="button" href="../sneak.html">Annuler</a>
-                <input class="button submitButton" type="submit" value="Valider"/>
+                <input class="button submitButton" type="submit" value="Valider" />
             </div>
         </form>
     </div>
 
-    
+
 </body>
 <script src="signIn.js"></script>
+
 </html>

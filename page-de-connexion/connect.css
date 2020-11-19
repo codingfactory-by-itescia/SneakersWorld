@@ -120,3 +120,18 @@ input:focus {
     border-right: 3px solid red;
 }
 
+.container-error {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.error-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF7878;
+    width: 30%;
+    border-radius: 1em;
+    color: white;
+}
