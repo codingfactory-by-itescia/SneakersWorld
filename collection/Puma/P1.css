@@ -1,0 +1,43 @@
+.laboite{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+
+}
+
+.thebox{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+
+}
+
+.box1{
+    box-shadow:0 4px 8px 0;
+    width: 200px;
+    height: 320px;
+    text-align: center;
+    cursor: pointer;
+}
+.prix{
+    color: grey;
+    font-size: 25px;
+}
+
+
+
+.box2{
+    box-shadow:0 4px 8px 0;
+    width: 200px;
+    height: 320px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box3{
+    box-shadow:0 4px 8px 0;
+    width: 200px;
+    height: 320px;
+    text-align: center;
+    cursor: pointer;
+}
