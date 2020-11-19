@@ -3,11 +3,11 @@ const mobileMenu = document.getElementById('menu-links');
 const button = document.querySelectorAll('.link');
 const underMenu = document.querySelector('#coll-logo');
 
-burgerButton.addEventListener('click', () => {
+/*burgerButton.addEventListener('click', () => {
     console.log('CLICK');
     mobileMenu.classList.toggle('visible');
 });
-
+*/
 button.forEach(link => {
     console.log(button);
     link.addEventListener('click', () => {
@@ -19,7 +19,9 @@ button.forEach(link => {
     });
 });
 
-button[1].addEventListener('click', () => {
+/*button[1].addEventListener('click', () => {
     underMenu.style.display = 'flex';
 });
+*/
+document.getElementById('header').innerHTML = 'test';
 

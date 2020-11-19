@@ -15,6 +15,14 @@
     font-family: 'Goldman';
 }
 
+.caroussel {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 .card-shoes {
     box-sizing: border-box;
     width: 80%;
@@ -24,8 +32,6 @@
     border-bottom: 15px solid red;
     border-left: 15px solid black;
     border-right: 15px solid black;
-    margin-top: 50px;
-    margin-left: 5%;
     display: flex;
     flex-direction: row;
 }
@@ -51,3 +57,10 @@
     justify-content: space-evenly;
     font-family: 'Goldman';
 }
+
+.shoes-2 {
+    display: none;
+}
+
+
+

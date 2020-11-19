@@ -10,7 +10,6 @@ function showSlides() {                           //cree la fonctions apeller ju
   slideIndex++;                                                     //chaque tour le slide initialiser en haut prend +1
   if (slideIndex > slides.length) {slideIndex = 1}                 //si slideindex > que la grandeurs du tableau remet au debut à slideIndex = 1 
   slides[slideIndex -1].style.display = "block";                  //slides -1 pour revenir index=0 , affiche l'immage = à l'index 
-  console.log(slideIndex);
   setTimeout(showSlides, 120);                       /* vitesse du slide 1000 = 1 seconde */ 
 }
 
