@@ -15,6 +15,20 @@
             <a class="button-menu" href="../sneak.html">Sneakers world</a>
         </div>
     </header>
+    <?php
+    
+        if(!empty($_POST)) {
+
+            $errors = array();
+
+            if(empty($_POST['username'])) {
+                $errors['username'] = "Vous n'avez pas entré de pseudo.";
+            }
+
+            var_dump($errors);
+        }
+
+    ?>
     <div class="form">
         <form action="">
             <div class="place">
