@@ -37,7 +37,7 @@ header nav h1 {
     align-items: center;
 }
 
-header nav li {
+header nav a {
     font-family: 'Goldman';
     font-size: 18px;
     font-weight: 700;
@@ -50,7 +50,7 @@ header nav li {
     justify-content: space-evenly;
 }
 
-#menu-links li {
+#menu-links a {
     width: 25%;
     color: white;
     font-size: 20px;
@@ -71,7 +71,8 @@ header nav li {
     color: black !important;
 }
 
-#menu-links li:hover {
+
+#menu-links a:hover {
     background-color: white;
     color: black;
     border-left: 7px solid red;
@@ -79,6 +80,7 @@ header nav li {
     border-bottom: 7px solid white;
     border-top: 7px solid white;
 }
+
 
 #profil-links {
     display: flex;
