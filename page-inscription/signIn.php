@@ -32,33 +32,37 @@
     <div class="form">
         <form action="">
             <div class="place">
-                <input type="text" placeholder="Nom" required>
+                <input class="lastName input" type="text" placeholder="Nom" required>
             </div>
             <div class="place">
-                <input type="text" placeholder="Prénom" required>
+                <input class="name input" type="text" placeholder="Prénom" required>
             </div>
             <div class="place">
-                <input type="text" placeholder="Date de naissance" required>
+                <input class="password input" type="text" placeholder="Mot de passe" required>
             </div>
             <div class="place">
-                <input type="text" placeholder="E-mail" required>
+                <input class="birth input" type="text" placeholder="Date de naissance" required>
             </div>
             <div class="place">
-                <input type="text" placeholder="Adresse" required>
+                <input class="mail input" type="text" placeholder="E-mail" required>
             </div>
             <div class="place">
-                <input type="text" placeholder="Ville" required>
+                <input class="adress input" type="text" placeholder="Adresse" required>
             </div>
             <div class="place">
-                <input type="text" placeholder="Code postal" required>
+                <input class="city input" type="text" placeholder="Ville" required>
+            </div>
+            <div class="place">
+                <input class="zipCode input" type="text" placeholder="Code postal" required>
+            </div>
+            <div id="buttons">
+                <a class="button" href="../sneak.html">Annuler</a>
+                <input class="button submitButton" type="submit" value="Valider"/>
             </div>
         </form>
     </div>
 
-    <div id="buttons">
-        <a class="button" href="../page-inscription/signIn.html">Annuler</a>
-        <a class="button" href="">Valider</a>
-    </div>
+    
 </body>
-
+<script src="signIn.js"></script>
 </html>
