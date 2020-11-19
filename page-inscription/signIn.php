@@ -16,53 +16,148 @@
         </div>
     </header>
     <?php
-    
-        if(!empty($_POST)) {
 
-            $errors = array();
+    if (!empty($_POST)) {
 
-            if(empty($_POST['username'])) {
-                $errors['username'] = "Vous n'avez pas entré de pseudo.";
-            }
+        require '../database/db.php';
 
-            var_dump($errors);
+        $errors = array();
+
+        if (empty($_POST['prenom']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['prenom'])) {
+            $errors['prenom'] = "Pseudo invalide.";
         }
 
+        if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['nom'])) {
+            $errors['nom'] = "Pseudo invalide.";
+        }
+
+        if (empty($_POST['mail']) || !filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
+            $errors['mail'] = "Email invalide";
+        } else {
+
+            $req = $pdo->prepare('SELECT id FROM users WHERE mail = ?');
+
+            $req->execute([$_POST['mail']]);
+
+            $user = $req->fetch();
+
+            if ($user) {
+                $errors['mail'] = 'Cet email est déjà utilisé';
+            }
+        }
+
+
+        if (empty($_POST['password'])) {
+            $errors['password'] = "Mot de passe invalide";
+        }
+
+        if (empty($_POST['birth'])) {
+            $errors['birth'] = "Date de naissance invalide";
+        }
+
+        if (empty($_POST['adress'])) {
+            $errors['adress'] = "adresse invalide";
+        }
+
+        if (empty($_POST['city'])) {
+            $errors['city'] = "Ville invalide";
+        }
+
+        if (empty($_POST['zipCode']) || is_int($_POST['zipCode']) == "false") {
+            $errors['zipCode'] = "Code postal invalide";
+        }
+
+        if (empty($errors)) {
+
+            $req = $pdo->prepare("
+                        INSERT INTO users(nom,prenom,password,naissance,mail,adresse,ville,cdp)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    ");
+
+            $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+
+            $req->bindValue(1, $_POST['nom']);
+            $req->bindValue(2, $_POST['prenom']);
+            $req->bindValue(3, $password);
+            $req->bindValue(4, $_POST['birth']);
+            $req->bindValue(5, $_POST['mail']);
+            $req->bindValue(6, $_POST['adress']);
+            $req->bindValue(7, $_POST['city']);
+            $req->bindValue(8, $_POST['zipCode']);
+
+            $req->execute();
+
+
+            $req2 = $pdo->prepare("SELECT * FROM users WHERE mail = ?");
+
+            $req2->execute(array($_POST['mail']));
+
+            $user2 = $req2->fetch();
+
+            session_start();
+
+            $_SESSION['auth'] = $user2;
+
+            header('Location: ../img360/sneak.php');
+
+            exit;
+        }
+    }
+
     ?>
+
+
+    <?php if (!empty($errors)) : ?>
+        <div class="error-div">
+            <ul>
+
+                <?php foreach ($errors as $error) : ?>
+
+                    <li><?= $error; ?></li>
+
+                <?php endforeach; ?>
+
+            </ul>
+        </div>
+
+    <?php endif; ?>
+
+
     <div class="form">
-        <form action="">
+        <form action="" method="POST">
             <div class="place">
-                <input class="lastName input" type="text" placeholder="Nom" required>
+                <input name="nom" class="lastName input" type="text" placeholder="Nom" required>
             </div>
             <div class="place">
-                <input class="name input" type="text" placeholder="Prénom" required>
+                <input name="prenom" class="name input" type="text" placeholder="Prénom" required>
             </div>
             <div class="place">
-                <input class="password input" type="text" placeholder="Mot de passe" required>
+                <input name="password" class="password input" type="password" placeholder="Mot de passe" required>
             </div>
             <div class="place">
-                <input class="birth input" type="text" placeholder="Date de naissance" required>
+                <input name="birth" class="birth input" type="text" placeholder="Date de naissance" required>
             </div>
             <div class="place">
-                <input class="mail input" type="text" placeholder="E-mail" required>
+                <input name="mail" class="mail input" type="text" placeholder="E-mail" required>
             </div>
             <div class="place">
-                <input class="adress input" type="text" placeholder="Adresse" required>
+                <input name="adress" class="adress input" type="text" placeholder="Adresse" required>
             </div>
             <div class="place">
-                <input class="city input" type="text" placeholder="Ville" required>
+                <input name="city" class="city input" type="text" placeholder="Ville" required>
             </div>
             <div class="place">
-                <input class="zipCode input" type="text" placeholder="Code postal" required>
+                <input name="zipCode" class="zipCode input" type="number" placeholder="Code postal" required>
             </div>
             <div id="buttons">
                 <a class="button" href="../sneak.html">Annuler</a>
-                <input class="button submitButton" type="submit" value="Valider"/>
+                <input class="button submitButton" type="submit" value="Valider" />
             </div>
         </form>
     </div>
 
-    
+
 </body>
 <script src="signIn.js"></script>
+
 </html>

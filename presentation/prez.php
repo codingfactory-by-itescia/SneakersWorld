@@ -7,7 +7,23 @@
     <title>SneakWorld</title>
 </head>
 <body>
-    <header> <p class="entete">Oublie pas de te connecter mon reuf  <a href="../page-de-connexion/connect.html"><button class="seconnecter">Se connecter</button></a> </p> </header>
+    <header> 
+        
+    <?php session_start();
+    
+        $user = $_SESSION['auth']; 
+
+		if($user) : ?>
+		
+		<p class="entete">Connecté en tant que <?= $user->prenom ?></p>
+
+		<?php else: ?>
+
+			<p class="entete">Oublie pas de te connecter mon reuf  <a href="../page-de-connexion/connect.html"><button class="seconnecter">Se connecter</button></a> </p> 
+
+		<?php endif; ?>
+    
+    </header>
 
     <a href="../img360/sneak.html"><h1>SneakersWorld</h1></a>
 
@@ -74,25 +90,6 @@
     <div class="dev_pic">
             <img src="images/IMG_3459.jpg" alt="Avatar" class="image">
             <div class="overlay">Merwan Laouini</div>
-    </div>
-    <div class="dev_pic">
-        <img src="images/angel.jpeg" alt="Avatar" class="image">
-        <div class="overlay">Angel Moreau</div>
-    </div>
-    <div class="dev_pic">
-            <img src="images/Walid.png" alt="Avatar" class="image">
-            <div class="overlay">Walid Haddoury</div>
-    </div>
-    <div class="dev_pic">
-        <img src="images/alexis.jpeg" alt="Avatar" class="image">
-        <div class="overlay">Alexis Majchrzak</div>
-    </div>
-    <div class="dev_pic">
-        <img src="images/alex 2.jpeg" alt="Avatar" class="image">
-        <div class="overlay">Axel Demorest</div>
-    </div><div class="dev_pic">
-        <img src="images/alexis.jpeg" alt="Avatar" class="image">
-        <div class="overlay">Nohan Marie-Louise </div>
     </div>
 </div>
     

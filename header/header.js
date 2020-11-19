@@ -31,8 +31,11 @@ const mobileMenu = document.getElementById('menu-links');
 const button = document.querySelectorAll('.link');
 const underMenu = document.querySelector('#coll-logo');
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 927964c3b403d854b3719b3d6f9fcb36dc8c912a
 burgerButton.addEventListener('click', () => {
     console.log('CLICK');
     mobileMenu.classList.toggle('visible');

@@ -106,3 +106,22 @@ form {
     border-left: 3px solid red;
     border-right: 3px solid red;
 }
+
+.error-div {
+    display: flex;
+    align-items: center;
+    background-color: #EF7878;
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px silver;
+}
+
+.error-div li {
+    font-family: "Segoe UI";
+    color: white;
+}
+
+.success_div {
+    background-color: green;
+}

@@ -1,0 +1,50 @@
+*, ::before, ::after{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+#header{
+    position: fixed;
+    top: 0;
+}
+#title-profil{
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+}
+.profil-container{
+    display: flex;
+    justify-content: center;
+}
+.profil-card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 50%;
+}
+table{
+    display: flex;
+    justify-content: center;
+}
+table tr{
+    height: 50px;
+    width: 800px;
+    border-bottom: 2px solid #000000;
+}
+td {
+    height: 50px;
+    width: 200px;
+}
+tr td:first-child{
+    font-weight: bold;
+}
+.info-title{
+    border-bottom: 2px solid #000000;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
