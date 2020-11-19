@@ -5,11 +5,11 @@ document.getElementById('header').innerHTML = `<header id="header">
     <ul id="menu-links">
         <a class="link isActive" href="../page-accueil/accueil.html">Accueil</a>
         <a class="link">Collections</a>
-        <a class="link" href="../page-ajouter-paire/addShoes.html">Rajouter sa paire</a>
+        <a class="link" href="../page-ajouter-paire/addShoes.php">Rajouter sa paire</a>
         <!-- Accueil, se connecter, les paires, Rajouter sa paire, Déconnection -->
     </ul>
     <ul id="profil-links">
-        <li><a href="../page-de-connexion/connect.html"><i class="fas fa-user"></i></a></li>
+        <li><a href="../page-de-connexion/connect.php"><i class="fas fa-user"></i></a></li>
         <li><i class="fas fa-power-off"></i></li>
     </ul>
 </nav>
