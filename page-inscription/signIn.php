@@ -98,7 +98,7 @@
 
             $_SESSION['auth'] = $user2;
 
-            header('Location: ../img360/sneak.php');
+            header('Location: ../page-accueil/accueil.html');
 
             exit;
         }
