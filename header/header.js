@@ -18,9 +18,9 @@ document.getElementById('header').innerHTML = `<header id="header">
     <li><img class="coll-img" src="../header/Logo/Asics.png" alt="Logo Asics"></li>
     <li><img class="coll-img" src="../header/Logo/Jordan.png" alt="Logo Jordan"></li>
     <li><img class="coll-img" src="../header/Logo/New Balance.png" alt="Logo New Balance"></li>
-    <li><img class="coll-img" src="../header/Logo/Nike.png" alt="Logo Nike"></li>
-    <li><img class="coll-img" src="../header/Logo/Puma.png" alt="Logo Puma"></li>
-    <li><img class="coll-img" src="../header/Logo/Vans.png" alt="Logo Vans"></li>
+    <li><a href="../collection/Nike/NI.html"><img class="coll-img" src="./Logo/Nike.png" alt="Logo Nike"></a></li>
+    <li><a href="../collection/Puma/P.html"></a><img class="coll-img" src="./Logo/Puma.png" alt="Logo Puma"></li>
+    <li><a href="../collection/Vans/V.html"></a><img class="coll-img" src="./Logo/Vans.png" alt="Logo Vans"></li>
 </ul>
 </header>
 <footer><a href="../presentation/prez.php">BIO</a></footer>`;

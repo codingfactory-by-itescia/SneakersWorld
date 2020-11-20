@@ -19,12 +19,6 @@
 
     <?php else : ?>
 
-        <style>
-            body {
-                background-color: pink;
-            }
-        </style>
-
         <?php
 
         require '../database/db.php';
