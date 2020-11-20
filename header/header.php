@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,21 @@
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./mobile-header.css">
 </head>
-<body>
 
-    <header id="header">
+<body>
+    <header>
         <nav>
             <i id="toggle" class="fas fa-bars"></i>
             <h1 id="title">SneakersWorld</h1>
             <ul id="menu-links">
-                <a class="link isActive" href="../page-accueil/accueil.html">Accueil</a>
+                <a class="link isActive" href="../page-accueil/accueil.php">Accueil</a>
                 <a class="link">Collections</a>
-                <a class="link" href="../page-ajouter-paire/addShoes.html">Rajouter sa paire</a>
+                <a class="link" href="../page-ajouter-shoes/addShoes.html">Rajouter sa paire</a>
                 <!-- Accueil, se connecter, les paires, Rajouter sa paire, Déconnection -->
             </ul>
             <ul id="profil-links">
-                <li><a href="../page-de-connexion/connect.html"><i class="fas fa-user"></i></a></li>
-                <li><i class="fas fa-power-off"></i></li>
+                <li><a href="../page-de-connexion/connect.php"><i class="fas fa-user"></i></a></li>
+                <li><a href="../page-de-connexion/deco.php"><i class="fas fa-power-off"></i></a></li>
             </ul>
         </nav>
         <ul id="coll-logo" style="display: none">
@@ -39,7 +40,8 @@
         </ul>
     </header>
     <div class="container"></div>
-    
+
     <script src="./header.js"></script>
 </body>
+
 </html>
