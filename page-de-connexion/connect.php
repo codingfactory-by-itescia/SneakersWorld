@@ -46,20 +46,18 @@
             $req->execute([$_POST['identifiant']]);
 
             $result = $req->fetch();
-            
-            if(empty($result)) {
+
+            if (empty($result)) {
                 $errors['error'] = "Utilisateur ou mot de passe incorrect.";
             } else {
 
-                if(password_verify($_POST['password'], $result->password)) {
+                if (password_verify($_POST['password'], $result->password)) {
 
                     $_SESSION['auth'] = $result;
 
                     header('Location: ../user_account/profil.php');
                 }
-
             }
-
         }
 
         ?>
@@ -69,16 +67,18 @@
         </header>
 
         <?php if (!empty($errors)) : ?>
-            <div class="error-div">
-                <ul>
+            <div class="container-error">
+                <div class="error-div">
+                    <ul>
 
-                    <?php foreach ($errors as $error) : ?>
+                        <?php foreach ($errors as $error) : ?>
 
-                        <li><?= $error; ?></li>
+                            <li><?= $error; ?></li>
 
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
 
         <?php endif; ?>
