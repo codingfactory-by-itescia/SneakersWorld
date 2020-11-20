@@ -109,25 +109,44 @@ a{
     justify-content:  space-around;
 }
 .bio{
-    background-color: #C5C5C5;
+	background-color: whitesmoke;
     height: 350px;
     width: 350px;
     border-radius: 2px;
-    border: 2px solid whitesmoke;
+	border-left:  10px solid black;
+	border-right: 10px solid black;
+	border-top: 10px solid red;
+	border-bottom: 10px solid red;
     color: black;
     text-align: center;
-    font-size: large;
+	font-size: large;
+	padding: 20px;
 }
 .dev{
     display: flex;
     justify-content: center;
 }
-
+.devo2{
+	display: flex;
+	justify-content: center;
+}
 .devo{
     display: flex;
-	justify-content: space-between;
-	margin-left: 120px;
-}
+	justify-content: center;
+	background-color: whitesmoke;
+	height: auto;
+	width: 950px;
+	border-radius: 2px;
+	border-left:  10px solid black;
+	border-right: 10px solid black;
+	border-top: 10px solid red;
+	border-bottom: 10px solid red;
+	color: black;
+	text-align: center;
+	font-size: large;
+	padding: 10px;
+	}
+
 * {box-sizing: border-box}
 
 .dev_pic {
@@ -138,8 +157,8 @@ a{
 
 .image {
   display: block;
-  width: 60%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
 }
 .image2{
 	display: block;
@@ -159,7 +178,7 @@ a{
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   color: #f1f1f1;
-  width: 60%;
+  width: 150px;
   transition: .5s ease;
   opacity:0;
   color: white;
