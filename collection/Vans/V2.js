@@ -1,14 +1,14 @@
-const NB550 = document.querySelector(".box1");
-NB550.addEventListener("click",function(){ 
-    window.open("https://google.com")
+const VansC = document.querySelector(".box1");
+VansC.addEventListener("click",function(){ 
+    window.open("file:///Users/angel/SneakersWorld/collection/vansclassique.html")
 } )
 
-const NB992 = document.querySelector(".box2");
-NB992.addEventListener("click",function(){ 
-    window.open("https://google.com")
+const VansSk = document.querySelector(".box2");
+VansSk.addEventListener("click",function(){ 
+    window.open("file:///Users/angel/SneakersWorld/collection/vanssk.html")
 } )
 
-const NB2002R = document.querySelector(".box3");
-NB2002R.addEventListener("click",function(){ 
-    window.open("https://google.com")
+const VansSup = document.querySelector(".box3");
+VansSup.addEventListener("click",function(){ 
+    window.open("file:///Users/angel/SneakersWorld/collection/vanssupreme.html")
 } )
