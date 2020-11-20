@@ -10,36 +10,30 @@
 </head>
 
 <body>
+
     <?php session_start();
 
-    $user = $_SESSION['auth'];
+    if (isset($_SESSION['auth'])) : ?>
 
-    if ($user) : ?>
-
-    <style>
-
-        body {
-            background-color: white;
-        }
-        </style>
-
-        <div class="container-error">
-            <div class="error-div">
-                <h1>Tu es déjà connecté</h1>
-            </div>
-        </div>
+        <?php header('Location: ../user_account/profil.php') ?>
 
     <?php else : ?>
 
+        <style>
+            body {
+                background-color: pink;
+            }
+        </style>
+
         <header>
-            <a class="button-menu" href="../sneak.html">Sneakers world</a>
+            <a class="button-menu" href="../page-accueil/accueil.php">Sneakers world</a>
         </header>
         <div id="card">
             <div class="card-connect">
                 <h1>CONNEXION</h1>
-                <form action="">
-                    <input class="input-connect login" type="text" placeholder="Identifiant" required>
-                    <input class="input-connect password" type="password" placeholder="Mot de passe" required>
+                <form action="" method="post">
+                    <input name="identifiant" class="input-connect login" type="email" placeholder="Votre email" required>
+                    <input name="password" class="input-connect password" type="password" placeholder="Mot de passe" required>
                     <div id="buttons">
                         <a class="button" href="../page-inscription/signIn.html">Inscription</a>
                         <input class="button submitButton" type="submit" value="Connexion">

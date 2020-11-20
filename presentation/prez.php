@@ -25,7 +25,7 @@
     
     </header>
 
-    <a href="../img360/sneak.html"><h1>SneakersWorld</h1></a>
+    <a href="../page-accueil/accueil.php"><h1>SneakersWorld</h1></a>
 
 <nav>
         <ul>
@@ -58,7 +58,7 @@
 
             <li class="autres"><a href="#">AUTRES </a>
                 <ul class="sous">
-                    <li ><a href="../presentation/prez.html" >Bio</a></li>
+                    <li ><a href="../presentation/prez.php" >Bio</a></li>
                     <li><a href="Cfps.html" >???????</a></li>
                 </ul>	
             </li>

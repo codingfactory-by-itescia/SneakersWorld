@@ -12,7 +12,7 @@
 <body>
     <header>
         <div>
-            <a class="button-menu" href="../sneak.html">Sneakers world</a>
+            <a class="button-menu" href="../page-accueil/accueil.php">Sneakers world</a>
         </div>
     </header>
     <?php
@@ -98,7 +98,7 @@
 
             $_SESSION['auth'] = $user2;
 
-            header('Location: ../page-accueil/accueil.html');
+            header('Location: ../page-accueil/accueil.php');
 
             exit;
         }
@@ -150,7 +150,7 @@
                 <input name="zipCode" class="zipCode input" type="number" placeholder="Code postal" required>
             </div>
             <div id="buttons">
-                <a class="button" href="../sneak.html">Annuler</a>
+                <a class="button" href="../page-accueil/accueil.php">Annuler</a>
                 <input class="button submitButton" type="submit" value="Valider" />
             </div>
         </form>

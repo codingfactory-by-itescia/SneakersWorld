@@ -3,15 +3,15 @@ document.getElementById('header').innerHTML = `<header id="header">
     <i id="toggle" class="fas fa-bars"></i>
     <h1 id="title">SneakersWorld</h1>
     <ul id="menu-links">
-        <a class="link isActive" href="../page-accueil/accueil.html">Accueil</a>
+        <a class="link isActive" href="../page-accueil/accueil.php">Accueil</a>
         <a class="link">Collections</a>
         <a class="link" href="../page-ajouter-shoes/addShoes.html">Rajouter sa paire</a>
         <!-- Accueil, se connecter, les paires, Rajouter sa paire, Déconnection -->
     </ul>
     <ul id="profil-links">
-        <li><a href="../page-de-connexion/connect.php"><i class="fas fa-user"></i></a></li>
-        <li><i class="fas fa-power-off"></i></li>
-    </ul>
+                <li><a href="../page-de-connexion/connect.php"><i class="fas fa-user"></i></a></li>
+                <li><a href="../page-de-connexion/deco.php"><i class="fas fa-power-off"></i></a></li>
+            </ul>
 </nav>
 <ul id="coll-logo" style="display: none">
     <li><img class="coll-img" src="../header/Logo/Adidas.png" alt="Logo adidas"></li>
