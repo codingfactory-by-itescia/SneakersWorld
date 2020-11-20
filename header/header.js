@@ -22,7 +22,8 @@ document.getElementById('header').innerHTML = `<header id="header">
     <li><img class="coll-img" src="../header/Logo/Puma.png" alt="Logo Puma"></li>
     <li><img class="coll-img" src="../header/Logo/Vans.png" alt="Logo Vans"></li>
 </ul>
-</header>`;
+</header>
+<footer><a href="../presentation/prez.php">BIO</a></footer>`;
 
 
 

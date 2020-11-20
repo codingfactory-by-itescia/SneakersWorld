@@ -1,14 +1,14 @@
 const Dessigner = document.querySelector(".box1");
 Dessigner.addEventListener("click",function(){ 
-    window.open("file:///Users/angel/SneakersWorld/collection/nikemax.html")
+    window.open("../nikemax.html")
 } )
 
 const Saccai = document.querySelector(".box2");
 Saccai.addEventListener("click",function(){ 
-    window.open("file:///Users/angel/SneakersWorld/collection/nikesacai.html")
+    window.open("../nikesacai.html")
 } )
 
 const Travis = document.querySelector(".box3");
 Travis.addEventListener("click",function(){ 
-    window.open("file:///Users/angel/SneakersWorld/collection/niketravis.html")
+    window.open("../niketravis.html")
 } )
