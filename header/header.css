@@ -147,3 +147,8 @@ header nav a {
         margin: 0;
     }
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+}

@@ -34,12 +34,14 @@
             <li><img class="coll-img" src="./Logo/Asics.png" alt="Logo Asics"></li>
             <li><img class="coll-img" src="./Logo/Jordan.png" alt="Logo Jordan"></li>
             <li><img class="coll-img" src="./Logo/New Balance.png" alt="Logo New Balance"></li>
-            <li><img class="coll-img" src="./Logo/Nike.png" alt="Logo Nike"></li>
-            <li><img class="coll-img" src="./Logo/Puma.png" alt="Logo Puma"></li>
-            <li><img class="coll-img" src="./Logo/Vans.png" alt="Logo Vans"></li>
+            <li><a href="../collection/Nike/NI.html"></a><img class="coll-img" src="./Logo/Nike.png" alt="Logo Nike"></li>
+            <li><a href="../collection/Puma/P.html"></a><img class="coll-img" src="./Logo/Puma.png" alt="Logo Puma"></li>
+            <li><a href="../collection/Vans/V.html"></a><img class="coll-img" src="./Logo/Vans.png" alt="Logo Vans"></li>
         </ul>
     </header>
     <div class="container"></div>
+
+    <footer><a href="../presentation/prez.php">BIO</a></footer>
 
     <script src="./header.js"></script>
 </body>
