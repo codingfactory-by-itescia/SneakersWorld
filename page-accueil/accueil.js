@@ -13,3 +13,4 @@ function showSlides() {                           //cree la fonctions apeller ju
   setTimeout(showSlides, 120);                       /* vitesse du slide 1000 = 1 seconde */ 
 }
 
+

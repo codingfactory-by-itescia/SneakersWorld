@@ -1,7 +1,8 @@
-* {
+body, html {
     margin: 0;
     padding: 0;
 }
+
 
 .tendances {
     width: 100%;
@@ -13,6 +14,8 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Goldman';
+    margin-top: 8%;
+
 }
 
 .caroussel {

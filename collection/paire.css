@@ -1,0 +1,45 @@
+.homme{
+	text-align: right;
+	margin-top: 100px;
+	margin-right: 21%;
+	font-size: 22px;
+
+}
+
+.prix{
+	text-align: right;
+	margin-right: 50px;
+	font-size: 22px;
+	margin-top: -3%;
+}
+.nom{
+	text-align: right;
+	margin-right: 8%;
+	font-size: 25px;
+	margin-top: 2%;
+
+}
+
+.nom2{
+	text-align: right;
+	margin-right: 13%;
+	margin-top: -2%;
+	font-size: 20px;
+}
+
+.description{
+	text-align: right;
+	margin-left:70%;
+	margin-right: 2%;
+	margin-top: 4%; 
+	box-shadow: all ;
+	text-align: left;
+	
+}
+
+
+.slidesauto{
+	margin-top: -33%;
+}
+
+
